@@ -1,8 +1,8 @@
 {
-  "name": "@arnob-b/observability",
-  "version": "1.0.3",
+  "name": "@hiredue/observability",
+  "version": "1.0.0",
   "description": "observability for nodejs application using winston and opentelemetry",
-  "keywords": ["observability", "nodejs", "winston", "opentelemetry", "electron", "desktop application"],
+  "keywords": ["observability", "nodejs", "winston", "opentelemetry", "electron", "desktop application", "hiredue"],
   "license": "MIT",
   "author": "Arnob Bhakta",
   "main": "./src/index.js",
