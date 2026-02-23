@@ -1,0 +1,24 @@
+{
+  "name": "@arnob-b/observability",
+  "version": "1.0.3",
+  "description": "observability for nodejs application using winston and opentelemetry",
+  "keywords": ["observability", "nodejs", "winston", "opentelemetry", "electron", "desktop application"],
+  "license": "MIT",
+  "author": "Arnob Bhakta",
+  "main": "./src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+	"dependencies": {
+    "@opentelemetry/instrumentation-undici": "^0.21.0",
+    "@opentelemetry/sdk-node": "^0.212.0",
+    "@opentelemetry/instrumentation-express": "^0.59.0",
+    "@opentelemetry/instrumentation-http": "^0.212.0",
+    "winston-daily-rotate-file": "^5.0.0"
+	},
+  "peerDependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "winston": "^3.19.0"
+  }
+}
