@@ -4,12 +4,12 @@
 # usage
 ## install dependencies
 ```bash
-npm install @arnob-b/observability
+npm install @hiredue-org/observability
 ```
 
 ## initializing observability
 ```javascript
-const { Observability } = require("@arnob-b/observability");
+const { Observability } = require("@hiredue-org/observability");
 Observability.init(OBSERVABILITY_CONFIG);
 ```
 
@@ -79,7 +79,7 @@ module.exports = OBSERVABILITY_CONFIG;
 
 ### predefined logger object from factory
 ```javascript
-const {logFunction} = require("@arnob-b/observability")
+const {logFunction} = require("@hiredue-org/observability")
 const {normalizeData} = require("./helper.cjs")
 
 const log  = {
@@ -112,7 +112,7 @@ attachHooksOnTransport("file-rotation-transport", {
 
 ## using tracers
 ```javascript
-const {startTracedExecution, traceExecution, traceAsyncExecution} = require("@arnob-b/observability");
+const {startTracedExecution, traceExecution, traceAsyncExecution} = require("@hiredue-org/observability");
 
 startTracedExecution("main_execution", async () => {
 	logger.debug("Starting main execution block");

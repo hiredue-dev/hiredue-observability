@@ -1,16 +1,17 @@
 const winston = require('winston')
 const { WatcherTransport, StreamTransport, FileRotationTransport } = require("../transports");
+const ConsoleTransport = require('../transports/console.transport');
 
 
 function buildTransports(CONFIG = {}) {
   const list = {};
 
-	if (CONFIG.CONSOLE && CONFIG.CONSOLE.ENABLED) {
-		list[CONFIG.CONSOLE.NAME] = new winston.transports.Console(CONFIG.CONSOLE);
+	if (CONFIG.CONSOLE) {
+		list[CONFIG.CONSOLE.NAME] = new ConsoleTransport(CONFIG.CONSOLE);
 	}
-	if (CONFIG.WATCHER && CONFIG.WATCHER.ENABLED) {
-		list[CONFIG.WATCHER.NAME] = new WatcherTransport(CONFIG.WATCHER);
-	}
+  else{
+    list['default-console'] = new winston.transports.Console()
+  }
 	if (CONFIG.FILE && CONFIG.FILE.ENABLED) {
 		list[CONFIG.FILE.NAME] = FileRotationTransport(CONFIG.FILE)
 	}

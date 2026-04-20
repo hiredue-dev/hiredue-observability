@@ -15,6 +15,7 @@ function initLogger(LOG_CONFIG){
 	transports = buildTransports(LOG_CONFIG.TRANSPORTS);
 	logger = winston.createLogger({
 		level: LOG_CONFIG.LEVEL,
+    silent: transports.length === 0,
 		format: winston.format.combine(
 			traceContextFormat(),
 			winston.format.timestamp(),

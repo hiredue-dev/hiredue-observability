@@ -1,10 +1,11 @@
 {
-  "name": "@hiredue/observability",
+  "name": "@hiredue-org/observability",
   "version": "1.0.0",
   "description": "observability for nodejs application using winston and opentelemetry",
   "keywords": ["observability", "nodejs", "winston", "opentelemetry", "electron", "desktop application", "hiredue"],
   "license": "MIT",
-  "author": "Arnob Bhakta",
+  "author": "Arnob Bhakta <arnobbhakta00@gmail.com>",
+	"repository": "hiredue-dev/hiredue-observability",
   "main": "./src/index.js",
   "type": "commonjs",
   "scripts": {
